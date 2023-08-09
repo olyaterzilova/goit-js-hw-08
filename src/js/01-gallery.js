@@ -33,22 +33,22 @@ function renderGallery() {
 // Рендеримо галерею при завантаженні сторінки
 window.addEventListener('DOMContentLoaded', renderGallery);
 
-// Додаємо обробник події на ul.gallery для делегування кліків на елементи галереї
-document.querySelector('.gallery').addEventListener('click', onGalleryItemClick);
+// // Додаємо обробник події на ul.gallery для делегування кліків на елементи галереї
+// document.querySelector('.gallery').addEventListener('click', onGalleryItemClick);
 
-// Функція для обробки кліку на елемент галереї
-function onGalleryItemClick(event) {
-  event.preventDefault();
+// // Функція для обробки кліку на елемент галереї
+// function onGalleryItemClick(event) {
+//   event.preventDefault();
 
-  // Перевіряємо, чи був клік на зображенні
-  if (event.target.nodeName !== 'IMG') {
-    return;
-  }
+//   // Перевіряємо, чи був клік на зображенні
+//   if (event.target.nodeName !== 'IMG') {
+//     return;
+//   }
 
-  // Отримуємо посилання на велике зображення
-  const largeImageURL = event.target.parentNode.getAttribute('href');
+//   // Отримуємо посилання на велике зображення
+//   const largeImageURL = event.target.parentNode.getAttribute('href');
 
-  // Відкриваємо модальне вікно з великим зображенням
-  const instance = basicLightbox.create(`<img src="${largeImageURL}" width="800" height="600">`);
-  instance.show();
-}
+//   // Відкриваємо модальне вікно з великим зображенням
+//   const instance = basicLightbox.create(`<img src="${largeImageURL}" width="800" height="600">`);
+//   instance.show();
+// }
