@@ -27,7 +27,7 @@ function renderGallery() {
     galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
     
     // Використовуэмо бібліотеку галереї
-    var lightbox = new SimpleLightbox('.gallery a');
+    new SimpleLightbox('.gallery a');
 }
 
 // Рендеримо галерею при завантаженні сторінки

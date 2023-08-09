@@ -11,5 +11,8 @@ const updateLocalStorage = throttle(function(event) {
 
 player.on('timeupdate', updateLocalStorage);
 
+// Отриуємо значення з localstorage
+let resLocalStorage = localStorage.getItem('videoplayer-current-time');
+
 // Встановлюємо значення з localStorage
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+player.setCurrentTime( (resLocalStorage === null) ? 0 : resLocalStorage );

@@ -37,17 +37,35 @@ window.addEventListener('load', function () {
 feedbackForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  // Очищуємо сховище
-  localStorage.removeItem('feedback-form-state');
-  
-    // Виводимо дані форми у консоль
-    const formData = {
-      email: emailInput.value,
-      message: messageInput.value,
-    };
-    console.log(formData);
+  // Отримуємо значення полей
+  const email = emailInput.value;
+  const message = messageInput.value;
 
-  // Очищуємо поля форми
-  emailInput.value = '';
-  messageInput.value = '';
+  // Перевіряємо на пустоту
+  if (email == '' || message == '') {
+    
+    if (email == '') {
+      alert('Email не заповнений')
+    }
+
+    if (message == '') {
+      alert('Повідомлення не заповнене')
+    }
+
+  } else {
+
+    // Очищуємо сховище
+    localStorage.removeItem('feedback-form-state');
+    
+      // Виводимо дані форми у консоль
+      const formData = {
+        email: emailInput.value,
+        message: messageInput.value,
+      };
+      console.log(formData);
+  
+    // Очищуємо поля форми
+    emailInput.value = '';
+    messageInput.value = '';
+  }
 });
