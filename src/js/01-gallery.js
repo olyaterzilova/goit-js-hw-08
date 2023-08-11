@@ -33,6 +33,8 @@ function renderGallery() {
 // Рендеримо галерею при завантаженні сторінки
 window.addEventListener('DOMContentLoaded', renderGallery);
 
+
+
 // // Додаємо обробник події на ul.gallery для делегування кліків на елементи галереї
 // document.querySelector('.gallery').addEventListener('click', onGalleryItemClick);
 
